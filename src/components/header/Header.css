@@ -1,93 +1,76 @@
-.active {
-    background-color: white;
-    color: black;
-    transition: 0.3s;
-}
 
 nav {
     display: flex;
+    background-color: rgba(0, 0, 0, 0.607);
     justify-content: space-between;
-    align-items: center;
-    background-color: black;
+    backdrop-filter: blur(3px);
     position: sticky;
     top: 0;
-}
-
-.title {
-    font-size: 1.5rem;
-    margin: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 0.5rem;
-    margin: 0 0.5rem;
-    border-radius: 0.5rem;
-}
-
-nav ul li a:not(.active):hover {
-    background-color: #172554;
-    transition: 0.3s;
-}
-
-nav .menu {
-    display: none;
-    position: absolute;
-    top: 0.75rem;
-    right: 0.5rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2.25rem;
-    height: 2rem;
-}
-
-nav .menu span {
-    height: 0.4rem;
+    align-items: center;
+    padding: 0 3.5rem;
     width: 100%;
-    background-color: white;
-    border-radius: 0.2rem;
+    height: 4rem;
+    font-family: poppins;
+    border-bottom: 1px solid rgb(75, 75, 75);
 }
 
-@media (max-width: 480px) {
-    nav .menu {
-        display: flex;
-    }
+nav .nav-menu {
+    display: flex;
+    align-items: center;
+}
 
-    nav {
-        flex-direction: column;
-        align-items: start;
-    }
+nav .contact-button {
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin: 0.25rem;
-    }
+nav .contact-button:hover {
+    padding: 0.5rem;
+    background-color: rgb(158, 158, 158);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
-    nav ul.open {
-        display: flex;
-    }
+nav .contact-button p {
+    color: rgb(0, 0, 0);
+    font-size: small;
+    font-weight: 500;
+}
 
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
+nav .nav-menu .logo-img {
+    width: 5rem;
+}
 
-    nav ul li a {
-        margin: 0.2rem 0.5rem;
-    }
+nav .nav-menu ul {
+    display: flex;
+    margin-left: 2rem;
+}
+
+nav .nav-menu ul li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+nav .nav-menu ul li a {
+    text-decoration: none;
+    color: rgb(158, 158, 158);
+    transition: 0.5s;
+    font-size: small;
+}
+
+nav .nav-menu ul li a:not(.active):hover {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+nav .nav-menu ul li  a.active {
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    
 }

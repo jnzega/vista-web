@@ -1,4 +1,4 @@
-export {default as Home} from './Home'
-export {default as About} from './Home'
-export {default as Team} from './Team'
-export {default as Contact} from './Contact'
+// export { default as [Component Name] } from '[Path]'
+export {default as Home} from './home/Home'
+export {default as Blog} from './blog/Blog'
+export {default as Docs} from './documentation/Docs'
