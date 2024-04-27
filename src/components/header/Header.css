@@ -1,4 +1,3 @@
-
 nav {
     display: flex;
     background-color: rgba(0, 0, 0, 0.607);
@@ -12,6 +11,15 @@ nav {
     height: 4rem;
     font-family: poppins;
     border-bottom: 1px solid rgb(75, 75, 75);
+    z-index: 2;
+}
+
+.responsive-hide {
+    display: none;
+}
+
+.responsive-show {
+    display: none;
 }
 
 nav .nav-menu {
@@ -35,6 +43,34 @@ nav .contact-button:hover {
     transition: 0.5s;
 }
 
+nav .burger-menu {
+    display: none;
+    height: 2rem;
+    width: 2rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+nav .burger-menu.open {
+    display: none;
+    height: 2rem;
+    width: 2rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+nav .burger-menu span {
+    background-color: white;
+    height: 0.1rem;
+    width: 100%;
+}
+
+nav .burger-menu.open span {
+    background-color: white;
+    height: 0.1rem;
+    width: 100%;
+}
+
 nav .contact-button p {
     color: rgb(0, 0, 0);
     font-size: small;
@@ -45,32 +81,94 @@ nav .nav-menu .logo-img {
     width: 5rem;
 }
 
-nav .nav-menu ul {
+nav .nav-menu ul.nav-link {
     display: flex;
     margin-left: 2rem;
 }
 
-nav .nav-menu ul li {
+nav .nav-menu ul.nav-link li {
     list-style: none;
     margin: 0 1rem;
 }
 
-nav .nav-menu ul li a {
+nav .nav-menu ul.nav-link li a {
     text-decoration: none;
     color: rgb(158, 158, 158);
     transition: 0.5s;
     font-size: small;
 }
 
-nav .nav-menu ul li a:not(.active):hover {
+nav .nav-menu ul.nav-link li a:hover {
     color: rgb(255, 255, 255);
     transition: 0.5s;
 }
 
-nav .nav-menu ul li  a.active {
+nav .nav-menu ul.nav-link li a.active:not(#team) {
     color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
-    
+    .contact-button {
+        display: none;
+    }
+
+    nav {
+        padding: 0 2rem;
+        background-color: black;
+    }
+
+    nav .nav-menu ul.nav-link {
+        display: none;
+    }
+
+    nav .burger-menu {
+        display: flex;
+        cursor: pointer;
+    }
+
+    nav .burger-menu.open {
+        display: flex;
+        cursor: pointer;
+    }
+
+    nav .burger-menu.open span:nth-child(1) {
+        transform: translate(0, 0.25rem) rotate(45deg);
+    }
+
+    nav .burger-menu.open span:nth-child(2) {
+        transform: translate(0, -0.5rem) rotate(-45deg);
+    }
+
+    .responsive-show {
+        transition: width 1s, height 1s;
+        display: flex;
+        flex-direction: column;
+        height: 12rem;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        background-color: white;
+        justify-content: center;
+        position: fixed;
+        border-bottom: 1px solid rgb(75, 75, 75);
+        font-family: poppins;
+        backdrop-filter: blur(3px);
+        background-color: rgba(0, 0, 0, 0.607);
+        z-index: 1;
+    }
+
+    .responsive-show .nav-link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .responsive-show .nav-link li {
+        list-style: none;
+    }
+
+    .responsive-show .nav-link li a {
+        text-decoration: none;
+        color: rgb(158, 158, 158);
+    }
 }
