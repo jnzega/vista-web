@@ -1,8 +1,6 @@
-# React + Vite
+# VISTA | Vibrating Visualisation Tracker
+___
+VISTA (Vibrating Visualisation Tracker) is an assistive device for visually impaired people that uses AI Computer Vision technology by tracking and detecting objects around through real-time images captured by a camera. Then the tracked and detected object information will be processed to be generated as feedback in the form of vibrations. From the feedback in the form of vibrations blind people will easily know the surrounding conditions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`This repo contain landing page for VISTA, you can read full update about VISTA on vista.jnzega.com [underconstruction]`
